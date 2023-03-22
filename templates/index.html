@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>OpenAI Quickstart</title>
+  <title>OpenAI - FLASK </title>
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='dog.png') }}"
@@ -12,13 +12,13 @@
   <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
   <h3>Translation OpenAI</h3>
   <form action="/" method="post">
-    <input type="text" name="letter" placeholder="Enter your letter" required />
+    <input type="text" name="letter" placeholder="Entrer votre lettre" required />
     <select name="to">
-      <option value="French">French</option>
+      <option value="French">Français</option>
       <option value="Malgache">Malgache</option>
-      <option value="English">English</option>
-      <option value="Japon">Japon</option>
-      <option value="Chine">Chine</option>
+      <option value="English">Anglais</option>
+      <option value="Japon">Japonais</option>
+      <option value="Chine">Chinois</option>
     </select>
     <input type="submit" value="Translate" />
   </form>
