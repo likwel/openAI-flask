@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
+  <h3>Translation OpenAI</h3>
+  <form action="/" method="post">
+    <input type="text" name="letter" placeholder="Enter your letter" required />
+    <select name="to">
+      <option value="French">French</option>
+      <option value="Malgache">Malgache</option>
+      <option value="English">English</option>
+      <option value="Japon">Japon</option>
+      <option value="Chine">Chine</option>
+    </select>
+    <input type="submit" value="Translate" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
