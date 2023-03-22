@@ -20,12 +20,6 @@ def index():
           frequency_penalty=0.0,
           presence_penalty=0.0
         )
-        """response = openai.Completion.create(
-            model="text-davinci-003",
-            prompt="Translate this into 1. French, 2. Spanish and 3. Japanese:\n\nWhat rooms do you have available?\n\n1.",
-            prompt=generate_prompt(animal),
-            temperature=0.6,
-        )"""
 
         return redirect(url_for("index", result=response.choices[0].text))
 
@@ -34,4 +28,4 @@ def index():
 
 
 def generate_prompt(source, dest):
-    return source + "\n\nTranslate this into " +dest
+    return "Translate this into " +dest+":\n\n"+source
